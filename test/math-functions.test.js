@@ -7,7 +7,7 @@ import {
     multiplyAnyArray
 } from '../src/math-functions.js';
 
-const {test, skip} = QUnit;
+const { test, skip } = QUnit;
 
 /* DO NOT MODIFY THIS FILE */
 
