@@ -54,9 +54,11 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    const mySum = a + b + c;
-    const myMultiply = a * b * c;
-    return [`${mySum}`, `${myMultiply}`, `${a} and ${b} and ${c} sum to ${mySum}.`, `The product of ${a} and ${b} and ${c} is ${myMultiply}.`];
+    const myTotal = sum(a, b)[0]; 
+    const allTotal = sum(myTotal, c)[0];
+    const myMulti = multiply(a, b)[0];
+    const myMultiplacation = multiply(myMulti, c)[0];
+    return [`${allTotal}`, `${myMultiplacation}`, `${a} and ${b} and ${c} sum to ${allTotal}.`, `The product of ${a} and ${b} and ${c} is ${myMultiplacation}.`];
     
 
 }
@@ -80,6 +82,18 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    //First element is some of the numbers in the array
+    //Second element the string that exactly follows line 74.
+    const d = sumArr[0];
+    const e = sumArr[1];
+    const f = sumArr[2];
+    const problemSolve = sum(d, e)[0];
+    const myResults = sum(problemSolve, f)[0];
+  
+    return [myResults, `${sumArr} was passed in as an array of numbers, and ${myResults} is their sum.`];
+
+   
+    
 
 }
 
